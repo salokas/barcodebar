@@ -1,6 +1,7 @@
 import {Platform} from 'react-native';
 import {TabNavigator, StackNavigator} from 'react-navigation';
 
+import CameraView from '../camera/CameraView';
 import CounterViewContainer from '../counter/CounterViewContainer';
 import CommentsViewContainer from '../comments/CommentsViewContainer';
 import ColorViewContainer from '../colors/ColorViewContainer';
@@ -10,7 +11,7 @@ const activeColor = 'white';
 
 // TabNavigator is nested inside StackNavigator
 export const MainScreenNavigator = TabNavigator({
-  Counter: {screen: CounterViewContainer},
+  Counter: {screen: CameraView},
   Comments: {screen: CommentsViewContainer}
 }, {
   tabBarOptions: {
@@ -25,7 +26,7 @@ export const MainScreenNavigator = TabNavigator({
 });
 
 MainScreenNavigator.navigationOptions = {
-  title: 'Pepperoni App Template',
+  title: 'Barcode Bar',
   header: {
     titleStyle: {color: 'white'},
     style: {

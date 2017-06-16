@@ -11,9 +11,26 @@ import {
 import Camera from 'react-native-camera';
 
 class CameraView extends React.Component {
+  static displayName = 'CounterView';
+
+  static navigationOptions = {
+    title: 'Camera',
+    tabBar: () => ({
+      icon: (props) => (
+        <Icon name='plus-one' size={24} color={props.tintColor} />
+      )
+    })
+  }
 
   onComponenDidMount() {
     this.startCameraCaptureLoop();
+  }
+
+  constructor() {
+    super();
+    this.state = {
+      imagesTaken: 0
+    }
   }
 
   render() {
@@ -25,16 +42,15 @@ class CameraView extends React.Component {
           }}
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}>
-          <Text style={styles.capture}>aim at code</Text>
+          <Text style={styles.capture}>aim at code ({this.state.imagesTaken})</Text>
         </Camera>
       </View>
     );
   }
 
-  let captureLoopInterval;
-
   startCameraCaptureLoop() {
     this.takePicture();
+    this.state.set("imagesTaken", this.state.imagesTaken + 1);
     this.captureLoopInterval = setInterval(() => {
       this.takePicture();
     }, 333);
