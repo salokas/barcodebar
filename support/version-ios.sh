@@ -2,7 +2,7 @@
 
 # adapted from: https://medium.com/@andr3wjack/versioning-react-native-apps-407469707661
 
-PROJECT_DIR="ios/barcode-bar"
+PROJECT_DIR="ios/barcodebar"
 INFOPLIST_FILE="Info.plist"
 INFOPLIST_DIR="${PROJECT_DIR}/${INFOPLIST_FILE}"
 

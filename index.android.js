@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import {AppRegistry, BackAndroid} from 'react-native';
 import {NavigationActions} from 'react-navigation';
 
-class barcode-bar extends Component {
+class barcodebar extends Component {
   componentWillMount() {
     BackAndroid.addEventListener('hardwareBackPress', this.navigateBack);
   }
@@ -34,4 +34,4 @@ class barcode-bar extends Component {
   }
 }
 
-AppRegistry.registerComponent('barcode-bar', () => barcode-bar);
+AppRegistry.registerComponent('barcodebar', () => barcodebar);

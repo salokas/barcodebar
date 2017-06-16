@@ -1,4 +1,4 @@
-package com.barcode-bar;
+package com.barcodebar;
 
 import android.app.Application;
 
