@@ -1086,7 +1086,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barcode-bar.app/barcodebar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barcodebar.app/barcodebar";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
