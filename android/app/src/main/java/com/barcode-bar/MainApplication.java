@@ -1,4 +1,4 @@
-package com.pepperoniapptemplate;
+package com.barcode-bar;
 
 import android.app.Application;
 
